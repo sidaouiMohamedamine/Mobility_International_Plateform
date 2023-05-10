@@ -13,6 +13,8 @@ import { AccomodationOfferDetailsComponent } from './accomodation-offer-details/
 import { NgxPaginationModule } from 'ngx-pagination';
 import { OwnerNavbarComponent } from './owner-navbar/owner-navbar.component';
 import { UpdateAccomodationComponent } from './update-accomodation/update-accomodation.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { PayementComponent } from './payement/payement.component';
 
 
 
@@ -27,6 +29,8 @@ import { UpdateAccomodationComponent } from './update-accomodation/update-accomo
         AccomodationOfferDetailsComponent,
         OwnerNavbarComponent,
         UpdateAccomodationComponent,
+        ReservationComponent,
+        PayementComponent,
 
     ],
     imports: [
