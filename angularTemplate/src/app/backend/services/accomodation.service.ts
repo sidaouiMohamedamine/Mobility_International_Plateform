@@ -12,10 +12,18 @@ export class AccomodationService {
 
   getAllAccomodation():Observable<any>
   {
-         return this.http.get('http://localhost:8081/espritmobility/accomodation/getAllAccomodation');
+         return this.http.get('http://localhost:8088/espritmobility/accomodation/getAllAccomodation');
   }
   /********************************************************************************************/
-  addAccomodation(accomodation:Accomodation):Observable<Object>{
+  addAccomodation(accomodation:Accomodation):Observable<any>{
     return  this.http.post('http://localhost:8088/espritmobility/accomodation/addAccomodation',accomodation);
+   }
+  /********************************************************************************************/
+
+   updateAccomodation(idAcc:number,accomodation:Accomodation):Observable<Object>{
+    return this.http.put(`http://localhost:8088/espritmobility/accomodation/updateAccomodation/${idAcc}`,accomodation);
+  }
+  getAccomodationById(idAcc:number):Observable<any>{
+    return this.http.get<Accomodation>(`http://localhost:8088/espritmobility/accomodation/getAccomodationById/${idAcc}`);
    }
 }

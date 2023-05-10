@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Accomodation } from '../models/Accomodation';
 import { AccomodationServiceService } from '../services/accomodation-service.service';
@@ -12,10 +12,13 @@ export class AccomodationOffersComponent implements OnInit {
 
   accomodation:Accomodation[]
   offset=0;
-    pageSize=4
+    pageSize=3
     page=1
-    pageSizes = [2, 4,6];
+    pageSizes = [3,6,9];
     totalLength:any
+    @Input() country:string
+    reverse:boolean=false
+
   constructor(private accomodationService:AccomodationServiceService,private router:Router) { }
 
   ngOnInit(): void {
@@ -63,6 +66,18 @@ getAccomodations(): void {
     this.page = 1;
     this.getAccomodations();
   }
+  Search(){
+    if(this.country == "")
+    {
+      this.ngOnInit();
+    }
+    else
+    {
+      this.accomodation=this.accomodation.filter(res=>{
+        return res.country.toLocaleLowerCase().match(this.country.toLocaleLowerCase());
+      })}
+
+    }
 
 
 }

@@ -11,6 +11,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PaginationComponent } from './pagination/pagination.component';
 import { AccomodationOfferDetailsComponent } from './accomodation-offer-details/accomodation-offer-details.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { OwnerNavbarComponent } from './owner-navbar/owner-navbar.component';
+import { UpdateAccomodationComponent } from './update-accomodation/update-accomodation.component';
 
 
 
@@ -23,6 +25,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
         NotesComponent,
         PaginationComponent,
         AccomodationOfferDetailsComponent,
+        OwnerNavbarComponent,
+        UpdateAccomodationComponent,
 
     ],
     imports: [

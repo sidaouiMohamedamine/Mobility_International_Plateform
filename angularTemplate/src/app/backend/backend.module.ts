@@ -7,13 +7,15 @@ import { AddAccomodationComponent } from './add-accomodation/add-accomodation.co
 import { AccomodationListComponent } from './accomodation-list/accomodation-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { UpdateAccomodationComponent } from './update-accomodation/update-accomodation.component';
 
 
 @NgModule({
   declarations: [
     TemplateComponent,
     AddAccomodationComponent,
-    AccomodationListComponent
+    AccomodationListComponent,
+    UpdateAccomodationComponent
   ],
   imports: [
     CommonModule,

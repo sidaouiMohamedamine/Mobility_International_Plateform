@@ -130,5 +130,6 @@ public class AccomodationServiceImpl implements IAccomodationService{
         return accomodations;
     }
 
+
 }
 
