@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Accomodation } from '../models/Accomodation';
 import { AccomodationServiceService } from '../services/accomodation-service.service';
 
@@ -10,9 +10,10 @@ import { AccomodationServiceService } from '../services/accomodation-service.ser
 })
 export class AccomodationOfferDetailsComponent implements OnInit {
 
+
   idAcc:number;
   accomodation:Accomodation
-  constructor(private activatedRoute:ActivatedRoute,private accomodationService:AccomodationServiceService) { }
+  constructor(private activatedRoute:ActivatedRoute,private accomodationService:AccomodationServiceService,private router:Router) { }
 
   ngOnInit(): void {
     this.idAcc=this.activatedRoute.snapshot.params['id'];
@@ -26,5 +27,9 @@ export class AccomodationOfferDetailsComponent implements OnInit {
     erreur=>console.log("Erreur")
     )
   }
+  toReserve() {
+
+    this.router.navigate(['/owner/reserveAccomodation'])
+    }
 
 }

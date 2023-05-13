@@ -1,1 +1,49 @@
-<p>payement works!</p>
+ <!-- /.card -->
+<div class="container mt-5 mb-5" *ngIf="steps==3">
+  <div class="card card-primary">
+    <div class="card-header">
+      <h3 class="card-title">
+        <i class="fas fa-lg fa-building me-2"></i>Reserve an Accomodation
+      </h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Start date Reserve" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="End date Reserve" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Country"  />
+            </div>
+
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Person number"  />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer d-flex justify-content-start">
+        <button type="submit" class="btn btn-primary" >
+        Previous
+       </button>
+       <button type="submit" class="btn btn-primary" style="margin-left: 87%;">
+         Valider
+       </button>
+      </div>
+  </div>
+  <!-- /.card -->
+</div>
